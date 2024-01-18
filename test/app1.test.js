@@ -47,7 +47,7 @@ describe('POST /api/users', () => {
         const response = await request(app)
             .post('/api/users')
             .send(newUser)
-            .set('auth', 'rishabh'); // Assuming 'rishabh' is the authentication key
+            .set('auth', 'rishabh'); 
 
         assert.strictEqual(response.status, 200);
         assert.strictEqual(response.body.name, 'John');
