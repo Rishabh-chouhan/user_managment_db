@@ -31,12 +31,12 @@ const authenticate = (req, res, next) => {
 const redis=require('redis');
 const redisclient=redis.createClient();
 redisclient.connect()
-redisclient.on('ready',()=>{
-    console.log("redis ok");
-})
-redisclient.on('error',(err)=>{
-    console.log("redis closed");
-})
+// redisclient.on('ready',()=>{
+//     console.log("redis ok");
+// })
+// redisclient.on('error',(err)=>{
+//     console.log("redis closed");
+// })
 
 
 
@@ -134,3 +134,4 @@ app.put('/api/users/:id', authenticate, validatePayload(userSchemaValidation), a
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+module.exports = app;
