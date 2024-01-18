@@ -1,8 +1,8 @@
 const request = require('supertest');
-const assert = require('assert'); // Using the built-in assert module
+const assert = require('assert'); 
 const app = require('../app1');
 const mongoose = require('mongoose');
-const User = require('../user-schema/user'); // Adjust the path based on your project structure
+const User = require('../user-schema/user'); 
 
 describe('GET /api/users', () => {
     it('should get all users', async () => {
